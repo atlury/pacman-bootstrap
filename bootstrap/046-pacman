@@ -12,6 +12,7 @@ tar xf ${SROOT}/pacman-${PACMAN_VER}.tar.gz
   pushd pacman-${PACMAN_VER}
     sed -i "s#CPPFLAGS CFLAGS CXXFLAGS LDFLAGS#CC CXX &#" scripts/makepkg.sh.in
     sed -i "/C*LAGS+=.*DEBUG/s#FLAGS+=#FLAGS=#g" scripts/makepkg.sh.in
+    patch -Np1 -i ${PROOT}/pacman.patch
     ./configure --prefix=/tools   \
                 --without-gpgme   \
                 --without-libcurl
