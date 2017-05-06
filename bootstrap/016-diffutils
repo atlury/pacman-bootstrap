@@ -10,6 +10,7 @@ tar xf ${SROOT}/diffutils-${DIFFUTILS_VER}.tar.xz
 
   time {
   pushd diffutils-${DIFFUTILS_VER}
+    sed -i '233,237 s/max)/max) \\/' lib/intprops.h
     ./configure --prefix=/tools
     make
     make install
