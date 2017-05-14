@@ -55,7 +55,7 @@ tar xf ${SROOT}/gcc-${GCC_VER}.tar.bz2
         --disable-bootstrap                            \
         --disable-libgomp
     make
-    make install
+    make -j1 install
     ln -s gcc /tools/bin/cc
   popd
   }

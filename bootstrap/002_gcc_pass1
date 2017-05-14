@@ -61,7 +61,7 @@ tar xf ${SROOT}/gcc-${GCC_VER}.tar.bz2
         --enable-multilib                              \
         --enable-languages=c,c++
     make
-    make install
+    make -j1 install
   popd
   }
 

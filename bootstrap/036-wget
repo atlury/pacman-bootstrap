@@ -14,6 +14,7 @@ tar xf ${SROOT}/wget-${WGET_VER}.tar.xz
                 --with-ssl=openssl \
                 --without-libidn   \
                 --without-libpsl   \
+                --without-metalink \
                 --with-libssl-prefix=/tools
     make
     make install
